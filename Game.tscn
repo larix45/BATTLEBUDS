@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Weapon.gd" type="Script" id=3]
 
 [node name="Node" type="Node"]
 
@@ -16,6 +17,10 @@ polygon = PoolVector2Array( 0, 0, 100, 0, 100, 100, 0, 100 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Game/Player"]
 polygon = PoolVector2Array( 0, 0, 100, 0, 100, 100, 0, 100 )
+
+[node name="Weapon" type="Node2D" parent="Game/Player"]
+position = Vector2( -506, -1427 )
+script = ExtResource( 3 )
 
 [node name="Enemy" type="KinematicBody2D" parent="Game"]
 position = Vector2( 472, 449 )
